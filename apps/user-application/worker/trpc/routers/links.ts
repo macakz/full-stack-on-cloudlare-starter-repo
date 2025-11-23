@@ -6,6 +6,7 @@ import {
 } from "@repo/data-ops/zod-schema/links";
 
 import { TRPCError } from "@trpc/server";
+import { createLink } from "@repo/data-ops/queries/links";
 import {
   ACTIVE_LINKS_LAST_HOUR,
   LAST_30_DAYS_BY_COUNTRY,
@@ -22,8 +23,9 @@ export const linksTrpcRoutes = t.router({
     .query(async ({}) => {
       return LINK_LIST;
     }),
-  createLink: t.procedure.input(createLinkSchema).mutation(async ({}) => {
-    return "random-id";
+  createLink: t.procedure.input(createLinkSchema).mutation(async ({input, ctx}) => {
+    const linkId = await createLink({...input, accountId: ctx.userInfo.userId});
+    return linkId
   }),
   updateLinkName: t.procedure
     .input(
