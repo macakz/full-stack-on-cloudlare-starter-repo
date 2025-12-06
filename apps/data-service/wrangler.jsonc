@@ -9,12 +9,19 @@
 	"compatibility_date": "2025-06-17",
 	"compatibility_flags": ["nodejs_compat"],
 	"observability": {
-		"enabled": true,
+		"enabled": true
 	},
 	"d1_databases": [
 		{
 			"database_id": "94f02c9f-a311-49ab-ab62-a2f3f53e5220",
 			"binding": "DB",
+			"remote": true
+		}
+	],
+	"kv_namespaces": [
+		{
+			"binding": "CACHE",
+			"id": "1756bf7ebd89492fa97d19fec7a43350",
 			"remote": true
 		}
 	]
