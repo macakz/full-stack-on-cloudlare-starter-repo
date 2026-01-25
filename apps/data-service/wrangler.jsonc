@@ -20,7 +20,7 @@
 	"r2_buckets": [
 		{
 			"binding": "BUCKET",
-			"bucket_name": "smart-links-eval-stage"
+			"bucket_name": "smart-links-eval-stage",
 		}
 	],
 	"d1_databases": [
@@ -34,7 +34,6 @@
 		{
 			"binding": "CACHE",
 			"id": "1756bf7ebd89492fa97d19fec7a43350",
-			"remote": true
 		}
 	],
 	"queues": {
@@ -55,6 +54,20 @@
 			"binding": "DESTINATION_EVALUATION_WORKFLOW",
 			"name": "destination-evaluation-workflow",
 			"class_name": "DestinationEvaluationWorkflow"
+		}
+	],
+	"durable_objects": {
+		"bindings": [
+			{
+				"name": "EVALUATION_SCHEDULAR",
+				"class_name": "EvaluationScheduler"
+			}
+		]
+	},
+	"migrations": [
+		{
+			"tag": "v1",
+			"new_classes": ["EvaluationScheduler"]
 		}
 	]
 }

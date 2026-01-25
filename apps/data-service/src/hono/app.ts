@@ -37,3 +37,4 @@ App.get('/:id', async (c) => {
 	c.executionCtx.waitUntil(c.env.QUEUE.send(queueMessage));
 	return c.redirect(destination);
 });
+
