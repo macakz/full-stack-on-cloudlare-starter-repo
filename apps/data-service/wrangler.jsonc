@@ -59,6 +59,10 @@
 	"durable_objects": {
 		"bindings": [
 			{
+				"class_name": "LinkClickTrackerV2",
+				"name": "LINK_CLICK_TRACKER_OBJECT"
+			},
+			{
 				"name": "EVALUATION_SCHEDULAR",
 				"class_name": "EvaluationScheduler"
 			}
@@ -68,6 +72,10 @@
 		{
 			"tag": "v1",
 			"new_classes": ["EvaluationScheduler"]
+		},
+		{
+			"tag": "v1",
+			"new_sqlite_classes": ["LinkClickTrackerV2"]
 		}
 	]
 }

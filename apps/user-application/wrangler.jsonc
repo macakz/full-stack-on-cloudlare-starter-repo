@@ -18,7 +18,14 @@
     {
       "database_id": "94f02c9f-a311-49ab-ab62-a2f3f53e5220",
       "binding": "DB",
-      "remote": true
-    }
-  ]
+      "remote": true,
+    },
+  ],
+  "services": [
+    {
+      "binding": "BACKEND_SERVICE",
+      "service": "data-service",
+      "remote": true,
+    },
+  ],
 }
