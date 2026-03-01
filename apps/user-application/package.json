@@ -10,7 +10,7 @@
     "serve": "vite preview",
     "test": "vitest run",
     "cf-typegen": "wrangler types --env-interface Env --env stage",
-    "stage:deploy": "npm run build && wrangler deploy,",
+    "stage:deploy": "npm run build && wrangler deploy",
     "production:deploy": "npm run production:build && wrangler deploy"
   },
   "dependencies": {
